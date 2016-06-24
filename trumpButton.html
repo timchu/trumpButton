@@ -2,7 +2,7 @@
   <head>
     <title>Tim Chu's Home page</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="button.js"></script>
+    <script src="trumpButton.js"></script>
     <style>
       .button {
         height: 90px;
@@ -10,8 +10,8 @@
       }
 
       #argbox {
-        position: absolute;
-        top: 10px;
+        position: relative;
+        top: -180;
         left: 330px;
         max-width: 600px;
       }
@@ -20,6 +20,8 @@
 
   <body>
   <img class="button" id="immigration-button" src="button.png"/>
+  <br>
+  <img class="button" id="nukes-button" src="button.png" height="90" width="300"/>
 
   <div id="argbox" style="display:none">
     <h2 id="title"></h2>
@@ -35,8 +37,6 @@
     </div>
   </div>
 
-  <br>
-  <img class="button" id="nukes-button" src="button.png" height="90" width="300"/>
   </body>
 </html>
 
