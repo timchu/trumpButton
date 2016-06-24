@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Tim Chu's Home page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="button.js"></script>
+    <style>
+      .button {
+        height: 90px;
+        width: 300px;
+      }
+
+      #argbox {
+        position: absolute;
+        top: 10px;
+        left: 330px;
+        max-width: 600px;
+      }
+    </style>
+  </head>
+
+  <body>
+  <img class="button" id="immigration-button" src="button.png"/>
+
+  <div id="argbox" style="display:none">
+    <h2 id="title"></h2>
+    <b>
+      FOR:
+    </b>
+    <div id="for">
+    </div>
+    <b>
+      AGAINST:
+    </b>
+    <div id="against">
+    </div>
+  </div>
+
+  <br>
+  <img class="button" id="nukes-button" src="button.png" height="90" width="300"/>
+  </body>
+</html>
+
