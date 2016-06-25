@@ -1,40 +1,52 @@
 <html>
   <head>
     <title>Tim Chu's Home page</title>
+    <!-- Tags for CSS Bootstrap red-buttons  --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="trumpButton.js"></script>
     <style>
-      .button {
+      .red-button {
         height: 90px;
         width: 300px;
+        content:url("red-button.png");
       }
 
-      #argbox {
+      .argbox {
         position: relative;
-        top: -180;
-        left: 330px;
-        max-width: 600px;
+        left: 20px;
       }
     </style>
   </head>
 
   <body>
-  <img class="button" id="immigration-button" src="button.png"/>
-  <br>
-  <img class="button" id="nukes-button" src="button.png" height="90" width="300"/>
 
-  <div id="argbox" style="display:none">
-    <h2 id="title"></h2>
-    <b>
-      FOR:
-    </b>
-    <div id="for">
-    </div>
-    <b>
-      AGAINST:
-    </b>
-    <div id="against">
-    </div>
+  <div style = "text-align:center">
+    <h1>Republican Presidential Nominee Donald Trump on the issues</h1>
+    <br>
+    <img src="http://rlv.zcache.com/donald_trump_photo_president_2016_flip_flops-rf2c1d966f39043159c7d7ee09305f05b_z9cuv_324.jpg?rlvnet=1">
+    <br>
+    <!-- I think this container is necessary or laying out the grid of CSS Bootstrap. --> 
+  </div>
+
+  <div class="container" style="width:2000px text-align:center">
+    <button type="button" class="btn btn-default btn-lg btn-block" id="immigration-button">IMMIGRATION</button>
+    <br>
+    <button type="button" class="btn btn-primary btn-lg btn-block" height=300 id="nukes-button">NUCLEAR WEAPONS</button>
+    <br>
+    <button type="button" class="btn btn-success btn-lg btn-block" id = "hispanics-button">HISPANICS</button>
+    <br>
+    <button type="button" class="btn btn-info btn-lg btn-block" id="refugees-button"> REFUGEES</button>
+    <br>
+    <button type="button" class="btn btn-success btn-lg btn-block" id = "healthcare-button">HEALTHCARE</button>
+    <br>
+    <button type="button" class="btn btn-warning btn-lg btn-block" id = "trade-button">TRADE</button>
+    <br>
+    <button type="button" class="btn btn-danger btn-lg btn-block" id = "lgbt_rights-button">LGBT RIGHTS</button>
+    <br>
+    <button type="button" class="btn btn-argbox btn-lg btn-block" id = "economy-button">ECONOMY</button>
+    <br>
   </div>
 
   </body>
