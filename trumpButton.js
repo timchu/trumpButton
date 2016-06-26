@@ -88,7 +88,7 @@ function showOnClick(issue) {
 function jqueryShowArgOnClick(issue) {
   makeArgBox(issue);
   buttonName = '#' + issue + '-button';
-  $(buttonName).click(function(event){
+  $(document).on('click touchstart', buttonName, function(event){
     showOnClick(issue);
   });
 }
