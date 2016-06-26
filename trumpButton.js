@@ -9,25 +9,32 @@ function antiTrump(issue) {
   return capitalize(issue) + " is a total loser! Terrible idea!"
 }
 
-// Create separate file storing database of fors and againsts.
-var trumpProImmigration = "I am for immigrants! I love immigrants!"
-var trumpAntiImmigration = "When Mexico sends its people, they're not sending their best.... They're rapists. And some, I assume, are good people."
+function arrToObject(array) {
+  return {
+    For: "\"" + array[0] + "\"",
+    Against: "\"" + array[1] + "\""
+  };
+}
 
-var trumpImmigration = {
-  For: trumpProImmigration,
-  Against: trumpAntiImmigration
-};
 
-var trumpProNukes = "Nuclear War is the most grave threat mankind ever faces."
-var trumpAntiNukes = "I will nuke the hell out of ISIS."
+// Have all of Trump's positions in 2 length arrays.
+var trumpImmigrationArr = ["I love immigration.", "Public reports routinely state great amounts of crime are being committed by illegal immigrants. This must be stopped and it must be stopped now."]
 
-var trumpNukes = {
-  For: trumpProNukes,
-  Against: trumpAntiNukes
-};
+var trumpImmigration = arrToObject(trumpImmigrationArr);
+
+var trumpNukesArr = ["It's a horror to use nuclear weapons. The power of weaponry today is the single greatest problem that our world has", "I will be the last to use (nuclear weapons)....But I will never, ever rule it out."]
+var trumpNukes = arrToObject(trumpNukesArr);
+
+trumpHillaryArr = ["Hillary Clinton I think is a terrific woman. I am biased because I have known her for years. I live in New York. She lives in New York. I really like her and her husband both a lot. I think she really works hard. And I think, again, she's given an agenda, it is not all of her, but I think she really works hard and I think she does a good job. I like her.", "The Hillary Clinton foreign policy has cost America thousands of lives and trillions of dollars -- and unleashed ISIS across the world. No secretary of state has been more wrong, more often, and in more places than Hillary Clinton. Her decisions spread death, destruction and terrorism everywhere she touched. "]
+
+var trumpHillary = arrToObject(trumpHillaryArr);
+
+var trumpHispanicsArr = ["Happy #CincoDeMayo! The best taco bowls are made in Trump Tower Grill. I love Hispanics!", "When Mexico sends its people, they're not sending their best.... They're rapists. And some, I assume, are good people."]
+
+var trumpHispanics = arrToObject(trumpHispanicsArr);
 
 function makeTrumpArg(issue) {
-  issueTitle = capitalize(issue)
+  issueTitle = capitalize(issue);
   var trumpProIssue = proTrump(issueTitle);
   var trumpAntiIssue = antiTrump(issueTitle);
   return {
@@ -39,7 +46,8 @@ function makeTrumpArg(issue) {
 var trump = {
   immigration: trumpImmigration,
   nukes: trumpNukes,
-  hispanics: makeTrumpArg('hispanics'),
+  hillary: trumpHillary,
+  hispanics: trumpHispanics,
   refugees: makeTrumpArg('refugees'),
   healthcare: makeTrumpArg('healthcare'),
   trade: makeTrumpArg('trade'),
@@ -67,6 +75,7 @@ function makeArgBox(issue, title=issue.toUpperCase()){
   $("#" + buttonId).after(box);
   $('#' + forId).text(trump[issue][For]);
   $('#' + againstId).text(trump[issue][Against]);
+  $('#' + id).css("text-align", "center");
 }
 
 function showOnClick(issue) {
@@ -84,7 +93,7 @@ function jqueryShowArgOnClick(issue) {
   });
 }
 
-var issues = ["immigration", "nukes", "hispanics", "lgbt_rights", "refugees", "healthcare", "trade", "economy"]
+var issues = ["immigration", "hillary", "nukes", "hispanics", "lgbt_rights", "refugees", "healthcare", "trade", "economy"]
 
 $(document).ready( function () {
   jqueryShowArgOnClick(issues[0]);
@@ -95,4 +104,5 @@ $(document).ready( function () {
   jqueryShowArgOnClick(issues[5]);
   jqueryShowArgOnClick(issues[6]);
   jqueryShowArgOnClick(issues[7]);
+  jqueryShowArgOnClick(issues[8]);
 });
