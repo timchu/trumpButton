@@ -96,6 +96,7 @@ function jqueryShowArgOnClick(issue) {
   buttonName = '#' + issue + '-button';
   $(buttonName).css('cursor','pointer');
   $(document).on('click', buttonName,  function(event) {
+    alert("hi");
     showOnClick(issue);
   });
 } 
