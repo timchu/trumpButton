@@ -84,33 +84,32 @@ function makeArgBox(issue, title=issue.toUpperCase()){
   $('#' + id).css("text-align", "center");
 }
 
-function showOnClick(issue) {
+function toggleOnClick(issue) {
   // Duplicate code with makeArgBox.
   argName = '#' + issue + '-arg';
   hideArgs();
-  $(argName).show();
+  $(argName).toggle();
 }
 
-function jqueryShowArgOnClick(issue) {
+function jqueryToggleArgOnClick(issue) {
   makeArgBox(issue);
   buttonName = '#' + issue + '-button';
   $(buttonName).css('cursor','pointer');
-  $(document).on('click touchstart', buttonName,  function(event) {
-      showOnClick(issue);
+  $(document).on('click', buttonName,  function(event) {
+      toggleOnClick(issue);
   });
 } 
-
 
 var issues = ["immigration", "hillary", "nukes", "hispanics", "lgbt_rights", "refugees", "healthcare", "trade", "economy"]
 
 $(document).ready( function () {
-  jqueryShowArgOnClick(issues[0]);
-  jqueryShowArgOnClick(issues[1]);
-  jqueryShowArgOnClick(issues[2]);
-  jqueryShowArgOnClick(issues[3]);
-  jqueryShowArgOnClick(issues[4]);
-  jqueryShowArgOnClick(issues[5]);
-  jqueryShowArgOnClick(issues[6]);
-  jqueryShowArgOnClick(issues[7]);
-  jqueryShowArgOnClick(issues[8]);
+  jqueryToggleArgOnClick(issues[0]);
+  jqueryToggleArgOnClick(issues[1]);
+  jqueryToggleArgOnClick(issues[2]);
+  jqueryToggleArgOnClick(issues[3]);
+  jqueryToggleArgOnClick(issues[4]);
+  jqueryToggleArgOnClick(issues[5]);
+  jqueryToggleArgOnClick(issues[6]);
+  jqueryToggleArgOnClick(issues[7]);
+  jqueryToggleArgOnClick(issues[8]);
 });

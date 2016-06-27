@@ -5,19 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-
-    <script type="text/javascript"> 
-        $(document).bind("mobileinit", function () {
-            // jQuery Mobile's Ajax navigation does not work in all cases (e.g.,
-            // when navigating from a mobile to a non-mobile page), especially when going back, hence disabling it.
-            $.extend($.mobile, {
-                ajaxEnabled: false
-            });
-        }); 
-    </script>
-
+    <!-- mobile support for jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).bind("mobileinit", function () {
+        $.mobile.ajaxEnabled = false;
+    });
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
     <script src="trumpButton.js"></script>
+
     <style>
       .argbox {
         position: relative;
