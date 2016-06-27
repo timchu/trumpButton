@@ -95,10 +95,11 @@ function jqueryShowArgOnClick(issue) {
   makeArgBox(issue);
   buttonName = '#' + issue + '-button';
   $(buttonName).css('cursor','pointer');
-  $(document).on('click', buttonName,  function(event) {
-    showOnClick(issue);
+  $(document).on('click touchstart', buttonName,  function(event) {
+      showOnClick(issue);
   });
 } 
+
 
 var issues = ["immigration", "hillary", "nukes", "hispanics", "lgbt_rights", "refugees", "healthcare", "trade", "economy"]
 
