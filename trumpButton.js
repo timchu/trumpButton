@@ -71,7 +71,9 @@ function capitalize(a) {
 }
 
 // Probably want to split up the jquery and the javascript.
-function makeArgBox(issue, title=issue.toUpperCase()){
+// Ideally, would have a title param with default spec, but it doesn't work pre-ES6.
+function makeArgBox(issue){
+  title = issue.toUpperCase();
   var id =issue + '-arg';
   var forId = 'for-' + issue;
   var againstId = 'against-' + issue;
