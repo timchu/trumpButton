@@ -116,8 +116,6 @@ function makeArgBox(issue){
 
   var forSrc = makeSrcHtml(trump[issueSrc][For]);
   var againstSrc = makeSrcHtml(trump[issueSrc][Against]);
-  console.log("For source: ", forSrc);
-  console.log("Against source: ", againstSrc);
 
   $("#" + buttonId).after(box);
   $('#' + forId).text("\"" + trump[issue][For] + "\"");
