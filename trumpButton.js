@@ -1,7 +1,7 @@
 var For = 'For'
 var Against = 'Against'
 // stupid hack for my weebly site to work.
-var width = 700;
+var width = 600;
 
 function proTrump(issue) {
   return "I am for " + issue + "! I love " + issue + "!";
