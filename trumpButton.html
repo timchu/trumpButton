@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>The Collected Positions of Donald J. Trump</title>
+    <!-- Tags for CSS Bootstrap red-buttons  --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- mobile support for jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).bind("mobileinit", function () {
+        $.mobile.ajaxEnabled = false;
+    });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+    <script src="trumpButton.js"></script>
+
+    <style>
+      .argbox {
+        position: relative;
+        left: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+  <div style = "text-align:center">
+    <h1>Trump Flip-Flops</h1>
+    <br>
+    <img src="http://rlv.zcache.com/donald_trump_photo_president_2016_flip_flops-rf2c1d966f39043159c7d7ee09305f05b_z9cuv_324.jpg?rlvnet=1">
+    <br>
+    <!-- I think this container is necessary or laying out the grid of CSS Bootstrap. --> 
+
+    <div class="container" style="text-align:center">
+      <button type="button" class="btn btn-default btn-lg btn-block" id="immigration-button">IMMIGRATION</button>
+      <br>
+      <button type="button" class="btn btn-primary btn-lg btn-block" id="hillary-button">HILLARY CLINTON</button>
+      <br>
+      <button type="button" class="btn btn-warning btn-lg btn-block" id = "hispanics-button">HISPANICS</button>
+      <br>
+      <button type="button" class="btn btn-danger btn-lg btn-block" height=300 id="nukes-button">NUCLEAR WEAPONS</button>
+      <br>
+      <button type="button" class="btn btn-success btn-lg btn-block" id = "healthcare-button">HEALTHCARE</button>
+      <br>
+      <button type="button" class="btn btn-info btn-lg btn-block" id="refugees-button"> REFUGEES</button>
+      <br>
+      <button type="button" class="btn btn-danger btn-lg btn-block" id = "lgbt_rights-button">LGBT RIGHTS</button>
+      <br>
+<!--      <button type="button" class="btn btn-warning btn-lg btn-block" id = "trade-button">TRADE</button>
+      <br>
+      <button type="button" class="btn btn-argbox btn-lg btn-block" id = "economy-button">ECONOMY</button>
+      <br> -->
+    </div>
+  </div>
+
+  </body>
+</html>
